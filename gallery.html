@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Silver Sands Hotel - Gallery</title>
+  <!-- Lightbox2 CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+  <link rel="stylesheet" href="home.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+  <div class="hotelfront-container">
+    <img src="hotel.jpg" alt="hotel" class="hotel-image"/>
+    <div class="hotel-name">SILVER SANDS HOTEL</div>
+  </div>
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <div class="dropdown" id="dropdownMenu">
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Journey</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Help & Support</a></li>
+    </ul>
+  </div>
+
+  <div class="user-icon">
+    <i class="fas fa-user"></i>
+  </div>
+  <div class="heart-icon">
+    <i class="fas fa-heart"></i>
+  </div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Overview</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="booking.html" class="active">Book Now</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="venue.html">Venues</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="wellness.html">Wellness</a></li>
+    </ul>
+  </nav>
+
+<!-- Gallery Section -->
+<section class="gallery" id="gallery">
+  <h2>Hotel Photo Gallery</h2>
+  <p class="gallery-intro">Explore the beauty, comfort, and elegance of Silver Sands Hotel through our handpicked gallery of images.</p>
+
+  <div class="gallery-grid" id="gallery">
+    <a href="hotel.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="hotel.jpg" alt="hotel" />
+    </a>
+    <a href="room1.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="room1.jpg" alt="Lobby" />
+    </a>
+    <a href="room2.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="room2.jpg" alt="Deluxe Room" />
+    </a>
+    <a href="room3.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="room3.jpg" alt="Swimming Pool" />
+    </a>
+    <a href="restaurant.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="restaurant.jpg" alt="Restaurant" />
+    </a>
+    <a href="spa1.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="spa1.jpg" alt="Spa Center" />
+    </a>
+    <a href="conference1.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="conference1.jpg" alt="Event Hall" />
+    </a>
+    <a href="restaurant1.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="restaurant1.jpg" alt="restaurant" />
+    </a>
+    <a href="restaurant2.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="restaurant2.jpg" alt="restaurant" />
+    </a>
+    <a href="play1.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="play1.jpg" alt="play area" />
+    </a>
+    <a href="weekend1.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="weekend1.jpg" alt="weekend vibe" />
+    </a>
+    <a href="swimmingpool.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="swimmingpool.jpg" alt="swimmingpool" />
+    </a>
+    <a href="room10.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="room10.jpg" alt="room" />
+    </a>
+    <a href="room11.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="room11.jpg" alt="room" />
+    </a>
+    <a href="room13.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="room13.jpg" alt="room" />
+    </a>
+    <a href="room15.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="room15.jpg" alt="room" />
+    </a>
+    <a href="room16.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="room16.jpg" alt="room" />
+    </a>
+    <a href="room17.jpg" data-pswp-width="1600" data-pswp-height="1067" target="_blank">
+      <img src="room17.jpg" alt="room" />
+    </a>
+  </div>
+</section>
+
+
+      <!-- Footer -->
+<footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+  <p>&copy; 2025 Silver Sands Hotel. All rights reserved.</p>
+  <p>Follow us:
+    <a href="#" style="color: #fff; margin: 0 10px;">Facebook</a> |
+    <a href="#" style="color: #fff; margin: 0 10px;">Instagram</a> |
+    <a href="#" style="color: #fff; margin: 0 10px;">Twitter</a>
+  </p>
+</footer>
+
+<script type="module">
+  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery',
+    children: 'a',
+    pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
+  });
+  lightbox.init();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+ 
+</body>
+</html>

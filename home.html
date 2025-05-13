@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<htm lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>hotel booking</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body>
+    <div class="hotelfront-container">
+       <img src="hotel.jpg" alt="hotel" class="hotel-image">
+       <div class="hotel-name"> SILVER SANDS HOTEL</div>
+    </div>
+
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      </header>
+  
+  <!-- Menu List -->
+  <div class="dropdown" id="dropdownMenu">
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Journey</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Help & Support</a></li>
+    </ul>
+  </div>
+    <div class="user-icon">
+        <i class="fas fa-user"></i>
+      </div>
+    <div class="heart-icon">
+        <i class="fas fa-heart"></i>
+      </div>
+
+    <!-- Navigation Bar (below the image, not on top of it) -->
+<nav class="navbar bottom" id="navbar">
+    <ul>
+        <li><a href="#overview">Overview</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="booking.html">booking</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="venue.html">Venues</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="wellness.html">Wellness</a></li>
+    </ul>
+  </nav>
+
+<!-- Overview Section -->
+<section class="overview" id="overview">
+    <h2>Hotel Highlights</h2>
+    <div class="overview-content">
+    <img src="hotel.jpg"  alt="hotel" class="hotel-image">
+    <div class="overview-text">
+    <h3>Our Legacy</h3>
+    <p>Founded in 2005, Silver Sands Hotel began as a small boutique hotel with a big dream – to redefine hospitality in Tamil Nadu. Over the years, we have grown into a luxurious retreat for travelers worldwide. With a focus on comfort, elegance, and warm service, our journey has been one of dedication, continuous improvement, and heartfelt guest experiences.</p>
+    </div>
+    </div>
+  </section>
+    
+    <div class="special-deals">
+    <h3>Special Deals</h3>
+    <p>We believe in making your stay more rewarding. Enjoy seasonal discounts, early bird packages, festive staycations, and honeymoon specials. Our current offer includes up to 30% off for bookings made 15 days in advance and complimentary breakfast with every suite booking.</p>
+    </div>
+  
+    <section class="Luxury">
+      <div class="Luxury-content">
+        <div class="Luxury-text">
+          <h3>Luxury Accommodation</h3>
+          <p>Choose from a variety of accommodations designed to fit your needs. Whether it's a cozy Single Room, a spacious Double Room, or a luxurious Deluxe Suite with modern amenities and stunning views — we ensure every room is a haven of comfort and style.</p>
+        </div>
+        <img src="room10.jpg" alt="Luxury room" class="Luxury-image">
+      </div>
+    </section>
+
+    <div class="amenities">
+    <h3>Top-Class Amenities</h3>
+    <p>Silver Sands Hotel offers a range of world-class facilities including free high-speed Wi-Fi, a rooftop swimming pool, an in-house spa, 24/7 room service, a fitness center, a multi-cuisine restaurant, business conference halls, and a private airport shuttle service.</p>
+    </div> 
+
+
+    <!-- Footer -->
+<footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+    <p>&copy; 2025 Silver Sands Hotel. All rights reserved.</p>
+    <p>Follow us:
+      <a href="#" style="color: #fff; margin: 0 10px;">Facebook</a> |
+      <a href="#" style="color: #fff; margin: 0 10px;">Instagram</a> |
+      <a href="#" style="color: #fff; margin: 0 10px;">Twitter</a>
+    </p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offers - Silver Sands Hotel</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="hotelfront-container">
+    <img src="hotel.jpg" alt="hotel" class="hotel-image">
+    <div class="hotel-name">SILVER SANDS HOTEL</div>
+  </div>
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <div class="dropdown" id="dropdownMenu">
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Journey</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Help & Support</a></li>
+    </ul>
+  </div>
+
+  <div class="user-icon">
+    <i class="fas fa-user"></i>
+  </div>
+  <div class="heart-icon">
+    <i class="fas fa-heart"></i>
+  </div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Overview</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="booking.html" class="active">Book Now</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="venue.html">Venues</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="wellness.html">Wellness</a></li>
+    </ul>
+  </nav>
+
+  <!-- Offers Section -->
+  <section class="offers" id="offers">
+    <h2>Exclusive Deals & Seasonal Offers</h2>
+    <p class="offers-intro">Unlock unforgettable experiences at Silver Sands Hotel with our handpicked offers designed to make your stay more delightful and affordable.</p>
+    
+    <div class="offer-list">
+      
+      <div class="offer-item">
+        <div class="offer-text">
+          <h3>Summer Escape – Save 25%</h3>
+          <p>Beat the heat in luxury! Enjoy a refreshing summer break with 25% off on all Deluxe Suites. Includes complimentary pool access and evening mocktails.</p>
+          <p><strong>Valid Till:</strong> July 31, 2025</p>
+          <a href="#" class="offer-btn">Grab Offer</a>
+        </div>
+        <img src="swimmingpool.jpg" alt="Summer Offer">
+      </div>
+  
+      <div class="offer-item reverse">
+        <img src="weekend.jpg" alt="Weekend Offer">
+        <div class="offer-text">
+          <h3>Weekend Bliss Package</h3>
+          <p>Rejuvenate with a weekend stay for 2 nights and get breakfast, spa voucher worth ₹1500, and a candlelight dinner – all included in your booking.</p>
+          <p><strong>Available:</strong> Every Friday to Sunday</p>
+          <a href="#" class="offer-btn">Book Now</a>
+        </div>
+      </div>
+  
+      <div class="offer-item">
+        <div class="offer-text">
+          <h3>Romantic Honeymoon Special</h3>
+          <p>Newlyweds get a warm welcome with flower decor, a personalized cake, and a complimentary couple's spa session in our serene wellness center.</p>
+          <p><strong>Bonus:</strong> 2-night minimum stay in a Luxury Suite</p>
+          <a href="#" class="offer-btn">Reserve Your Suite</a>
+        </div>
+        <img src="special.jpg" alt="Honeymoon Offer">
+      </div>
+  
+    </div>
+  </section>
+
+      <!-- Footer -->
+<footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+  <p>&copy; 2025 Silver Sands Hotel. All rights reserved.</p>
+  <p>Follow us:
+    <a href="#" style="color: #fff; margin: 0 10px;">Facebook</a> |
+    <a href="#" style="color: #fff; margin: 0 10px;">Instagram</a> |
+    <a href="#" style="color: #fff; margin: 0 10px;">Twitter</a>
+  </p>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

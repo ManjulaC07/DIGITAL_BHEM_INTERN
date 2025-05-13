@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Silver Sands Hotel - Wellness</title>
+  <link rel="stylesheet" href="home.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+  <div class="hotelfront-container">
+    <img src="hotel.jpg" alt="hotel" class="hotel-image"/>
+    <div class="hotel-name">SILVER SANDS HOTEL</div>
+  </div>
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <div class="dropdown" id="dropdownMenu">
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Journey</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Help & Support</a></li>
+    </ul>
+  </div>
+
+  <div class="user-icon">
+    <i class="fas fa-user"></i>
+  </div>
+  <div class="heart-icon">
+    <i class="fas fa-heart"></i>
+  </div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Overview</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="booking.html" class="active">Book Now</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="venue.html">Venues</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="#wellness">Wellness</a></li>
+    </ul>
+  </nav>
+
+  <!-- Wellness Section -->
+  <section class="wellness" id="wellness">
+    <h2>Relax, Refresh & Rejuvenate</h2>
+    <p class="wellness-intro">At Silver Sands Hotel, wellness isn't just a service – it's an experience. Indulge in our serene spa treatments, calming yoga sessions, and modern fitness facilities designed to revive your body and mind.</p>
+
+    <div class="wellness-content">
+      <div class="wellness-box">
+        <img src="spa.jpg" alt="Spa Therapy">
+        <h3>Tranquil Spa</h3>
+        <p>Enjoy full-body massages, aroma therapy, and rejuvenating skin treatments by certified therapists in a peaceful setting.</p>
+      </div>
+      <div class="wellness-box">
+        <img src="meditation.jpg" alt="Yoga Classes">
+        <h3>Yoga & Meditation</h3>
+        <p>Start your day with guided yoga and breathing exercises in our open garden or indoor yoga room.</p>
+      </div>
+      <div class="wellness-box">
+        <img src="gym.jpg" alt="Fitness Center">
+        <h3>Modern Fitness Center</h3>
+        <p>Stay fit on the go with top-notch gym equipment and personalized fitness sessions on request.</p>
+      </div>
+    </div>
+  </section>
+
+      <!-- Footer -->
+<footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+  <p>&copy; 2025 Silver Sands Hotel. All rights reserved.</p>
+  <p>Follow us:
+    <a href="#" style="color: #fff; margin: 0 10px;">Facebook</a> |
+    <a href="#" style="color: #fff; margin: 0 10px;">Instagram</a> |
+    <a href="#" style="color: #fff; margin: 0 10px;">Twitter</a>
+  </p>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('dropdownMenu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offers - Silver Sands Hotel</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="hotelfront-container">
+    <img src="hotel.jpg" alt="hotel" class="hotel-image">
+    <div class="hotel-name">SILVER SANDS HOTEL</div>
+  </div>
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <div class="dropdown" id="dropdownMenu">
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Journey</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Help & Support</a></li>
+    </ul>
+  </div>
+
+  <div class="user-icon">
+    <i class="fas fa-user"></i>
+  </div>
+  <div class="heart-icon">
+    <i class="fas fa-heart"></i>
+  </div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Overview</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="#booking" class="active">Book Now</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="venue.html">Venues</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="wellness.html">Wellness</a></li>
+    </ul>
+  </nav>
+
+  <section class="booking" id="booking">
+    <h2>Book Your Stay</h2>
+    <p>Select your preferred room type and view available options at Silver Sands Hotel.</p>
+  
+    <div class="booking-filter">
+      <label for="room-type-select">Select Room Type:</label>
+      <select id="room-type-select" onchange="renderRooms(this.value)">
+        <option value="">-- Choose Room Type --</option>
+        <option value="Single">Single</option>
+        <option value="Double">Double</option>
+        <option value="Deluxe">Deluxe</option>
+      </select>
+    </div>
+  
+    <div class="filtered-rooms" id="filtered-rooms">
+      <!-- Filtered room cards appear here -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+    <p>&copy; 2025 Silver Sands Hotel. All rights reserved.</p>
+    <p>Follow us:
+      <a href="#" style="color: #fff; margin: 0 10px;">Facebook</a> |
+      <a href="#" style="color: #fff; margin: 0 10px;">Instagram</a> |
+      <a href="#" style="color: #fff; margin: 0 10px;">Twitter</a>
+    </p>
+  </footer>
+
+  <script>
+const roomData = [
+  {
+    type: 'Single',
+    name: 'Single Room A',
+    desc: 'Cozy room with free Wi-Fi and workspace.',
+    cost: 1000,
+    img: 'room9.jpg',
+    amenities: 'Free Wi-Fi, Workspace, Air Conditioning'
+  },
+  {
+    type: 'Single',
+    name: 'Single Room B',
+    desc: 'Comfortable space with city view.',
+    cost: 1200,
+    img: 'room7.jpg',
+    amenities: 'City View, Free Wi-Fi, Flat TV'
+  },
+  {
+    type: 'Single',
+    name: 'Single Room A',
+    desc: 'Cozy room with free Wi-Fi and workspace.',
+    cost: 1000,
+    img: 'room8.jpg',
+    amenities: 'Free Wi-Fi, Workspace, Complimentary Breakfast'
+  },
+  {
+    type: 'Single',
+    name: 'Single Room B',
+    desc: 'Comfortable space with city view.',
+    cost: 1200,
+    img: 'room11.jpg',
+    amenities: 'City View, Room Heater, Free Wi-Fi'
+  },
+  {
+    type: 'Single',
+    name: 'Single Room A',
+    desc: 'Cozy room with free Wi-Fi and workspace.',
+    cost: 1000,
+    img: 'room15.jpg',
+    amenities: 'Free Wi-Fi, Workspace, Private Bathroom'
+  },
+  {
+    type: 'Single',
+    name: 'Single Room B',
+    desc: 'Comfortable space with city view.',
+    cost: 1200,
+    img: 'room16.jpg',
+    amenities: 'City View, Flat TV, Free Wi-Fi'
+  },
+  {
+    type: 'Double',
+    name: 'Double Room A',
+    desc: 'Spacious with balcony and breakfast.',
+    cost: 2000,
+    img: 'room13.jpg',
+    amenities: 'Balcony, Complimentary Breakfast, Free Wi-Fi'
+  },
+  {
+    type: 'Double',
+    name: 'Double Room B',
+    desc: 'Modern design with lounge area.',
+    cost: 2200,
+    img: 'room10.jpg',
+    amenities: 'Lounge Area, Smart TV, Free Wi-Fi'
+  },
+  {
+    type: 'Double',
+    name: 'Double Room A',
+    desc: 'Spacious with balcony and breakfast.',
+    cost: 2000,
+    img: 'room14.jpg',
+    amenities: 'Balcony, Air Conditioning, Breakfast Included'
+  },
+  {
+    type: 'Double',
+    name: 'Double Room A',
+    desc: 'Spacious with balcony and breakfast.',
+    cost: 2000,
+    img: 'room13.jpg',
+    amenities: 'Balcony, Breakfast, Mini Fridge'
+  },
+  {
+    type: 'Deluxe',
+    name: 'Deluxe Suite A',
+    desc: 'Luxury suite with minibar and spa bath.',
+    cost: 3500,
+    img: 'room1.jpg',
+    amenities: 'Minibar, Spa Bath, Premium Bedding'
+  },
+  {
+    type: 'Deluxe',
+    name: 'Deluxe Suite B',
+    desc: 'Elegant suite with sea view and living room.',
+    cost: 4000,
+    img: 'room3.jpg',
+    amenities: 'Sea View, Living Room, Smart TV'
+  },
+  {
+    type: 'Deluxe',
+    name: 'Deluxe Suite B',
+    desc: 'Elegant suite with sea view and living room.',
+    cost: 4000,
+    img: 'room5.jpg',
+    amenities: 'Sea View, Coffee Maker, Luxury Toiletries'
+  },
+  {
+    type: 'Deluxe',
+    name: 'Deluxe Suite B',
+    desc: 'Elegant suite with sea view and living room.',
+    cost: 4000,
+    img: 'room6.jpg',
+    amenities: 'Sea View, Private Balcony, Spa Access'
+  },
+  {
+    type: 'Deluxe',
+    name: 'Deluxe Suite B',
+    desc: 'Elegant suite with sea view and living room.',
+    cost: 4000,
+    img: 'room15.jpg',
+    amenities: 'Sea View, Spa Bath, King Bed'
+  },
+  {
+    type: 'Deluxe',
+    name: 'Deluxe Suite B',
+    desc: 'Elegant suite with sea view and living room.',
+    cost: 4000,
+    img: 'room17.jpg',
+    amenities: 'Sea View, Mini Bar, Jacuzzi'
+  },
+];
+function renderRooms(type) {
+  const container = document.getElementById('filtered-rooms');
+  if (!type) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const filtered = roomData.filter(room => room.type === type);
+
+  container.innerHTML = filtered.map(room => `
+    <div class="filtered-room-card">
+      <img src="${room.img}" alt="${room.name}" class="room-img" />
+      <h4>${room.name}</h4>
+      <p>${room.desc}</p>
+      <p class="room-cost">Cost: ₹${room.cost}/Day</p>
+      <a href="book-room.html?type=${room.type}&name=${encodeURIComponent(room.name)}&desc=${encodeURIComponent(room.desc)}&cost=${room.cost}&img=${encodeURIComponent(room.img)}&amenities=${encodeURIComponent(room.amenities)}" 
+        class="book-now-btn">
+        Book Now
+      </a>
+    </div>
+  `).join('');
+}
+function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
